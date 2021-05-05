@@ -3,7 +3,7 @@ var path, node_ssh, ssh, fs;
 fs = require('fs');
 path = require('path');
 node_ssh = require('node-ssh');
-ssh = new node_ssh();
+ssh = new node_ssh.NodeSSH();
 
 // the method that starts the deployment process
 function main() {
@@ -87,7 +87,7 @@ function sshConnect() {
       // TODO: ADD YOUR IP ADDRESS BELOW (e.g. '12.34.5.67')
       host: '107.22.145.68',
       username: 'ubuntu',
-      privateKey: 'hs-key.pem'
+      privateKey: 'fp-key.ppk'
     })
     .then(function() {
       console.log('SSH Connection established.');
